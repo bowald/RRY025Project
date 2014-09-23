@@ -20,21 +20,16 @@ Yl    = 0.25; % < 1
 results = {};
 for i = 1:length(cut)
     H = (Yh - Yl) .* (1 - exp(-c *(rforest.^2 ./ (cut(i)^2) ) ) ) + Yl;
-%    plot2d(H)
     procForest = H.*forest;
     procForest = ifft2(procForest);
     procForest = exp(procForest);
     results{1,i} = procForest;
 end
 
+% Display images neatly
+displayImageGrid(results,cut);
 
-% % reverse functions
-length(cut)
 
-%  for i=1:length(cut)
-%      subplot(length(cut)/2,2,i);
-%      h = imshow(results{i});
-%      title(strcat('Cut: ', num2str(cut(i))))
-%  end
 
-imshow([forestgray, results{5}],[])
+
+%imshow([forestgray, results{5}],[])
