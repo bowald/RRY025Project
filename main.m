@@ -12,7 +12,7 @@ rforest = raduv(forest);
 % Constants
 cut   = [2:9];
 c     = 10;
-Yh    = 2; % > 1
+Yh    = 1.2; % > 1
 Yl    = 0.25; % < 1
 
 % % Homomorphic filter
@@ -22,7 +22,7 @@ for i = 1:length(cut)
     procForest = H.*forest;
     procForest = ifft2(procForest);
     procForest = exp(procForest) + 1;
-    results{1,i} = procForest;
+    results{1,i} = real(procForest);
 end
 
 % Display images neatly
