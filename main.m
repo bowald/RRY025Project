@@ -3,8 +3,10 @@ load('forest.mat');
 
 % init functions
 imshow(forestgray)
+% forest = histeq(forestgray);
+% figure
+% imshow(forest,[])
 forest = log(1 + forestgray);
-forest = forestgray;
 % med padding skall bilden vara 601 x 893
 n = 301;
 m = 447;
@@ -25,12 +27,11 @@ Yh    = 2; % > 1
 Yl    = 0.25; % < 1
 
 % % Homomorphic filter
-results = {};
 for i = 1:length(cut)
     H = (Yh - Yl) .* (1 - exp(-c *(rforest.^2 ./ (cut(i)^2) ) ) ) + Yl;
 
     %The filtering
-    procForest = H.*forest;
+    procForest = forest.*H;
     procForest = ifftshift(procForest);
     procForest = ifft2(procForest);
     procForest = procForest(1:n, 1:m);
