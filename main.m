@@ -1,23 +1,24 @@
 %%
 
 % Constants
-n = 301;
-m = 447;
-q = 2*m - 1;
-p = 2*n - 1;
+
 cut   = [40:10:80];
 c     = 1;
 Yh    = 2; % > 1
-Yl    = 0.25; % < 1
+Yl    = 0.75; % < 1
 
-load('forest.mat');
+forestgray = im2double(imread('pout.tif'));
+%load('forest.mat');
 imshow(forestgray)
-
+n = size(forestgray,1);
+m = size(forestgray,2);
+q = 2*m - 1;
+p = 2*n - 1;
 % log
 forest = log(1 + forestgray);                         
 
 % Zero padding
-forest = padarray( forest , [p-n q-m],  0, 'post');   
+forest = padarray( forest , [p-n q-m],  'replicate', 'post');   
 
 % Transform
 forest = fft2(forest);                                
@@ -31,7 +32,7 @@ forest = fftshift(forest);
   centerV = ceil(p/2);
 
 for i = 1:length(cut)
-  gaussianNumerator = (u - centerU).^2 + (v - centerV).^2;
+  gaussianNumerator = ((u - centerU).^2 + (v - centerV).^2);
   H = 1 - exp(-c * (gaussianNumerator./(cut(i).^2)));
   H = (Yh - Yl) * H + Yh;
 
@@ -48,7 +49,7 @@ for i = 1:length(cut)
     procForest = procForest(1:n, 1:m);
 
     % Inverse log
-    procForest = exp(procForest) - 1; %reverse log(x + 1)
+    procForest = exp(procForest - 1); %reverse log(x + 1)
 
     % Result only in real values
     result = real(procForest);
