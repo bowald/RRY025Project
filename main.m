@@ -2,23 +2,27 @@
 
 % Constants
 
-cut   = [40:10:80];
-c     = 1;
-Yh    = 2; % > 1
-Yl    = 0.75; % < 1
+cut   = 10;  % Grey/tolarance. Higher, a smaler spectra of grey values.
+% c     = 1;
+Yh    = [1:0.1:2]; % > 1  %Brightness higher is darker
+Yl    = 0.8; % < 1 %lower makes black areas more black
 
-forestgray = im2double(imread('pout.tif'));
-%load('forest.mat');
-imshow(forestgray)
+% forestgray = im2double(imread('pout.tif'));
+load('forest.mat');
+figure
+  imshow(forestgray, []) % Original image
 n = size(forestgray,1);
 m = size(forestgray,2);
 q = 2*m - 1;
 p = 2*n - 1;
 % log
-forest = log(1 + forestgray);                         
+forest = log(forestgray);
+
+figure
+  imshow(forest, []); % Logarithm of the image
 
 % Zero padding
-forest = padarray( forest , [p-n q-m],  'replicate', 'post');   
+forest = padarray( forest , [p-n q-m],  0, 'post');   
 
 % Transform
 forest = fft2(forest);                                
@@ -31,11 +35,12 @@ forest = fftshift(forest);
   centerU = ceil(q/2);
   centerV = ceil(p/2);
 
-for i = 1:length(cut)
+for i = 1:length(Yh)
   gaussianNumerator = ((u - centerU).^2 + (v - centerV).^2);
-  H = 1 - exp(-c * (gaussianNumerator./(cut(i).^2)));
-  H = (Yh - Yl) * H + Yh;
-
+  H = 1 - exp( - (gaussianNumerator./ (2* cut.^2) ) );
+  H = (Yh(i) - Yl) * H + Yh(i);
+  % figure
+  % imshow(H,[]);
     %The filtering
     procForest = H.*forest;
 
@@ -49,7 +54,7 @@ for i = 1:length(cut)
     procForest = procForest(1:n, 1:m);
 
     % Inverse log
-    procForest = exp(procForest - 1); %reverse log(x + 1)
+    procForest = exp(procForest); %reverse log(x + 1)
 
     % Result only in real values
     result = real(procForest);
