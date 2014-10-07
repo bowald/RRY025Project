@@ -4,8 +4,8 @@
 
 cut   = 10;  % Grey/tolarance. Higher, a smaler spectra of grey values.
 % c     = 1;
-Yh    = [1:0.1:2]; % > 1  %Brightness higher is darker
-Yl    = 0.8; % < 1 %lower makes black areas more black
+Yh    = 1.2; % > 1  %Brightness higher is darker
+Yl    = [0.7:0.1:0.9]; % < 1 %lower makes black areas more black
 
 % forestgray = im2double(imread('pout.tif'));
 load('forest.mat');
@@ -19,7 +19,7 @@ p = 2*n - 1;
 forest = log(forestgray);
 
 figure
-  imshow(forest, []); % Logarithm of the image
+  % imshow(forest, []); % Logarithm of the image
 
 % Zero padding
 forest = padarray( forest , [p-n q-m],  0, 'post');   
@@ -35,10 +35,10 @@ forest = fftshift(forest);
   centerU = ceil(q/2);
   centerV = ceil(p/2);
 
-for i = 1:length(Yh)
+for i = 1:length(Yl)
   gaussianNumerator = ((u - centerU).^2 + (v - centerV).^2);
   H = 1 - exp( - (gaussianNumerator./ (2* cut.^2) ) );
-  H = (Yh(i) - Yl) * H + Yh(i);
+  H = (Yh - Yl(i)) * H + Yh;
   % figure
   % imshow(H,[]);
     %The filtering
