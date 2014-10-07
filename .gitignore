@@ -5,3 +5,5 @@ rapp.aux
 rapp.fdb_latexmk
 rapp.fls
 rapp.pdf
+*.TIFF
+*.pdf
