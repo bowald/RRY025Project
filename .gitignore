@@ -1,0 +1,7 @@
+.db
+*.DS_Store
+rapp.log
+rapp.aux
+rapp.fdb_latexmk
+rapp.fls
+rapp.pdf
