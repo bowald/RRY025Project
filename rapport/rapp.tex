@@ -5,12 +5,13 @@
 \usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{caption}
+\usepackage[font={small,it}]{caption}
 \usepackage{subcaption}
 \usepackage[]{algorithm2e}
 \usepackage[noend]{algpseudocode}
 \usepackage{graphicx}
 \usepackage{qtree}
+\usepackage[apaciteclassic]{apacite}
 \usepackage[colorinlistoftodos]{todonotes}
 
 \makeatletter
@@ -33,5 +34,11 @@
 \include{includes/method}
 \include{includes/results}
 \include{includes/discussion}
+\include{includes/appendix}
+
+\newpage
+\bibliographystyle{apacite}
+\bibliography{bib}
+
 
 \end{document} 
