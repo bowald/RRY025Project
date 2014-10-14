@@ -5,7 +5,7 @@
 % \begin{document}
 
 
-\section{Results}
+\section{Results from applying homomorphic filtering}
 	This section will present the results of applying homomorphic filtering (HF)
 	on an image. Also provided is some experiments with different images
 	and filters not used in the book, as to test if this method could yield
@@ -22,7 +22,7 @@
 		 %Har väl inga direkta större
 		% inslag av kraftig illumination
 		
-		The filter first used in this project was
+		The filter first used in this project was (as mentioned above)
 		the variant of the gaussian high-pass filter, detailed in the course book on pp. 314; 
 		%
 		\begin{equation}
@@ -34,16 +34,17 @@
 		the filter in regard to illumination and reflection. The $\gamma_L$ parameter
 		will define the amount of suppression of the low frequencies (illumination); a lower $\gamma_L$
 		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}. While
-		figure~\ref{fig:low_freq_supp} may not be the most pleasurable image to look at, but it 
-		enhances the information hidden in the low frequencies, especially in the darker areas.
+		figure~\ref{fig:low_freq_supp} may not be the most aesthetic image to look at, but it 
+		greatly enhances the information hidden in the low frequencies, especially in the darker areas.
+		Noteworthy is also that noise gets amplified as the lower frequencies gets suppressed.
 		\begin{figure}[h!]
 		\centering
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{pics/suppressed_low_frequences.png}
 			\caption{$\gamma_L = 0.01,~\gamma_H = 1$}
 			\label{fig:low_freq_supp}
 			\end{subfigure}%			
-			\begin{subfigure}[b]{0.6\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{pics/non_suppressed_low_frequences.png}
 			\caption{$\gamma_L = 0.8,~\gamma_H = 1$}
 			\label{fig:low_freq_non_supp}
@@ -59,12 +60,13 @@
 		examine figure~\ref{fig:gamma_diff}.
 		\begin{figure}[h!]
 			\centering
-			\begin{subfigure}[b]{0.6\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/non_emph_high_frequnces.png}
 				\caption{$\gamma_L = 0.3,~\gamma_H = 1.2$}
 				\label{fig:high_freq_non_emph}
-			\end{subfigure}%	
-			\begin{subfigure}[b]{0.6\textwidth}
+			\end{subfigure}%
+			\hfill	
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/emph_high_frequnces.png}
 				\caption{$\gamma_L = 0.3,~\gamma_H = 2.5$}
 				\label{fig:high_freq_emph}
@@ -81,23 +83,23 @@
 		narrow spectra of gray levels. The effect of this is visible in figure~\ref{fig:sigma}
 		\begin{figure}[h!]
 			\centering
-			\begin{subfigure}[b]{0.7\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/low_sigma.png}
 				\caption{$\gamma_L = 0,~\gamma_H = 1,~D_0 = 10$}
 				\label{fig:low_sigma}
 			\end{subfigure}%
-			\begin{subfigure}[b]{0.7\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/high_sigma.png}
 				\caption{$\gamma_L = 0,~\gamma_H = 1,~D_0 =80$}
 				\label{fig:high_sigma}
 			\end{subfigure}
 			\label{fig:sigma}
-			\begin{subfigure}[b]{0.6\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/low_sigma_filter.png}
 				\caption{}
 				\label{fig:low_sigma_filter}
 			\end{subfigure}%
-			\begin{subfigure}[b]{0.6\textwidth}
+			\begin{subfigure}[b]{0.5\textwidth}
 				\includegraphics[width=\textwidth]{pics/high_sigma_filter.png}
 				\caption{}
 				\label{fig:high_sigma_filter}
@@ -107,7 +109,7 @@
 		\end{figure}
 		with the corresponding filters. A very high $D_0$ is moving close to edge detection,
 		which can be very useful in areas such as computer vision, which is described in 
-		the paper \cite{Fan20111468}.\\
+		the paper~\cite{Fan20111468}.\\
 		\\
 		Various $\gamma_l$ and $\gamma_h$ paramaters has been tried out empirically with 
 		various results. One has to ask oneself; What information should be extracted, and what 
@@ -140,12 +142,12 @@
 		illumination distortion, such as figure~\ref{fig:gamma_diff} taken
 		\begin{figure}[h!]
         \centering
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{pics/microbes_before.png}
                 \caption{Original image}
                 \label{fig:microbe_before}
         \end{subfigure}%
-        \begin{subfigure}[b]{0.6\textwidth}
+        \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{pics/microbes_after.png}
                 \caption{Image after homomorphic filtering}
                 \label{fig:microbe_after}
@@ -156,12 +158,13 @@
 		from the matlab image processing toolbox, the effects are much more obvious. 
 		In this image there is a large illumination
 		distortion in the background (the black gradient), which here is efficiently 
-		removed by the homomorphic filtering process. \\
+		removed by the homomorphic filtering process (the black, uniform gradient border
+		comes from the zero padding). \\
 		\\
 		When reading various papers on the
 		subject we found several other areas where homomorphic filtering is very effective,
 		such as a preprocessing step for facial recognition. The human face has many convex
-		portions, which contributes to illumination. In the paper mentioned earlier, HF
+		portions, which contributes to illumination. In the paper~\cite{Fan20111468}, HF
 		is used to remove this illumination and bring forth the edges in the face, making
 		the facial recognition algorithms perform better under varying lightning conditions.
 		%Elaborate perhaps?
