@@ -16,7 +16,6 @@ figure
   imshow(forestgray, []) % Original image
 histi = histeq(forestgray);
 %figure
-%    imshow(histi)
 n = size(forestgray,1);
 m = size(forestgray,2);
 q = 2*m - 1;
@@ -24,11 +23,8 @@ p = 2*n - 1;
 % log
 forest = log(forestgray);
 
-% imshow(forest, []); % Logarithm of the image
-
 % Zero padding
 forest = padarray( forest , [p-n q-m],  0, 'post');   
-
 % Transform
 forest = fft2(forest);                                
 
@@ -45,8 +41,6 @@ for i = 1:length(Yl)
   H = 1 - exp(-c*(gaussianNumerator./ (2* cut(i).^2) ) );
   H = (Yh(i) - Yl(i)) * H + Yl(i);
   
-   figure
-   surfc(H,'Edgecolor','none');
     %The filtering
     procForest = H.*forest;
 
