@@ -6,17 +6,24 @@
 
 
 \section{Results}
-	This section will present the results of applying homomorphic filtering
+	This section will present the results of applying homomorphic filtering (HF)
 	on an image. Also provided is some experiments with different images
 	and filters not used in the book, as to test if this method could yield
 	better or worse results in different types of information depicted.
 	\subsection{Results on the image provided with the project}
-		The image provided with the project depicts a forest scenery. %include picture
-		As seen in figure [INSERT IMAGE HERE] it %Har väl inga direkta större
+		The image provided with the project depicts a forest scenery, %include picture
+		as seen in figure~\ref{fig:original}.
+		\begin{figure}[h!]
+			\includegraphics[width=\textwidth]{pics/orig_pic.png}
+			\caption{The original picture, depicting a forest scenery}
+			\label{fig:original}		
+		\end{figure}		
+		
+		 %Har väl inga direkta större
 		% inslag av kraftig illumination
 		
 		The filter first used in this project was
-		the gaussian high-pass filter detailed in the course book on pp. 314; 
+		the variant of the gaussian high-pass filter, detailed in the course book on pp. 314; 
 		%
 		\begin{equation}
 		\label{eqn:gaussian_filter}
@@ -26,7 +33,7 @@
 		This filter has the additional $\gamma$-parameters added in order to tweak
 		the filter in regard to illumination and reflection. The $\gamma_L$ parameter
 		will define the amount of suppression of the low frequencies (illumination); a lower $\gamma_L$
-		will suppress low frequencies, which can be seen in figure~\ref{fig:various_low_gamma}. While
+		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}. While
 		figure~\ref{fig:low_freq_supp} may not be the most pleasurable image to look at, but it 
 		enhances the information hidden in the low frequencies, especially in the darker areas.
 		\begin{figure}[h!]
@@ -45,6 +52,8 @@
 			\caption{The effect of changing $\gamma_L$}				
 		\end{figure}		
 		%
+		\\
+		\\
 		A large value of the $\gamma_H$ parameter 
 		will emphasize the high frequencies (reflection). As an example, 
 		examine figure~\ref{fig:gamma_diff}.
@@ -65,6 +74,8 @@
 		\end{figure}		
 		One is able to see that the reflections gets emphasized and the overall
 		image gets darker and more polarized.
+		\\
+		\\
 		The third and final parameter is $D_0$, which controls the steepness of the filter.
 		In practice, this means that a larger $D_0$ will produce an image with a more 
 		narrow spectra of gray levels. The effect of this is visible in figure~\ref{fig:sigma}
@@ -97,13 +108,13 @@
 		with the corresponding filters. A very high $D_0$ is moving close to edge detection,
 		which can be very useful in areas such as computer vision, which is described in 
 		the paper \emph{Homomorphic filtering based illumination normalization 
-		method for face recognition} by Fan, Zhang.
+		method for face recognition} by Fan, Zhang.\\
 		\\
 		Various $\gamma_l$ and $\gamma_h$ paramaters has been tried out empirically with 
 		various results. One has to ask oneself; What information should be extracted, and what 
 		method performs best? When experimenting with emphasizing the reflections, the 
 		general results was not very good. Usually the image got very dark with a few white
-		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}.
+		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}.\\
 		\\
 		When observing the original image, there seems to be some 
 		low frequency details hidden in the darker sections of the image which we were able
@@ -114,6 +125,7 @@
 		of the image gets equalized. One drawback is that the bushes, which details 
 		and structure seems consist
 		largely of illumination, gets suppressed and blends in with the background.\\
+		\\
 		Further the other parameters was set to $c = 0$ and $D_0 = 32$. Of course,
 		the paramaters should be changed depending on what information should be extracted.
 		Our final conclusion when working on this image is that homomorphic filtering
@@ -129,17 +141,6 @@
 		illumination distortion, such as figure~\ref{fig:gamma_diff} taken
 		\begin{figure}[h!]
         \centering
-% <<<<<<< HEAD
-        % \begin{subfigure}[b]{0.6\textwidth}
-        %         \includegraphics[width=\textwidth]{pics/gamma_difference_emph_lowfreq.png}
-        %         \caption{$\gamma_L = 0.1,~\gamma_H = 2$}
-        %         \label{fig:gamma_l_emph}
-        % \end{subfigure}%
-        % \begin{subfigure}[b]{0.6\textwidth}
-        %         \includegraphics[width=\textwidth]{pics/gamma_difference_no_emph_lowfreq.png}
-        %         \caption{$\gamma_L = 0.9,~\gamma_H = 2.8$}
-        %         \label{fig:gamma_l}
-% =======
 		\begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth]{pics/microbes_before.png}
                 \caption{Original image}
@@ -149,7 +150,6 @@
                 \includegraphics[width=\textwidth]{pics/microbes_after.png}
                 \caption{Image after homomorphic filtering}
                 \label{fig:microbe_after}
-% >>>>>>> 89710fbfa1d52b28cbaa20bff4bb526a16a2c6f7
         \end{subfigure}
         \caption{An image with a appearent illumination distortion in the background}	
         \label{fig:gamma_diff}
