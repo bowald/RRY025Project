@@ -1,6 +1,40 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Fan%
+\ \BBA {} Zhang%
+}{%
+Fan%
+\ \BBA {} Zhang%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+Fan20111468}
+\APACinsertmetastar {%
+Fan20111468}%
+\begin{APACrefauthors}%
+Fan, C\BHBI N.%
+\BCBT {}\ \BBA {} Zhang, F\BHBI Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Homomorphic filtering based illumination normalization
+  method for face recognition} {Homomorphic filtering based illumination
+  normalization method for face recognition}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Pattern Recognition Letters}{32}{10}{1468 - 1479}.
+\newblock
+\begin{APACrefURL}
+  \url{http://www.sciencedirect.com/science/article/pii/S0167865511001000}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1016/j.patrec.2011.03.023}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gonzalez%
 \ \BBA {} Woods%
 }{%
