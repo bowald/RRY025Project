@@ -29,7 +29,7 @@ Applying the logarimic transformation on the original image results in a transfo
 \begin{figure}[h!]
 \begin{equation}
   f(u,v) = i(u,v) r(u,v) \xrightarrow{\ln} \ln{f(u,v)} = \ln{i(u,v)} + \ln{r(u,v)} 
-  \label{eqn:log}
+  \label{eqn:loga}
 \end{equation}
   \begin{equation}
     \begin{split}
@@ -37,7 +37,7 @@ Applying the logarimic transformation on the original image results in a transfo
     \end{split}
     \label{eqn:logtrans}
   \end{equation}
-\caption{image $f$ represented with an illumination component $i$ and reflection component $r$, in Eq \ref{eqn:log} multiplication becomes additiv after logarithmic transform. Eq \ref{eqn:logtrans} shows the Fouriered and logarithmic transformed image $Z$ and it's illumination and reflection component. }
+\caption{image $f$ represented with an illumination component $i$ and reflection component $r$, in Eq \ref{eqn:loga} multiplication becomes additiv after logarithmic transform. Eq \ref{eqn:logtrans} shows the Fouriered and logarithmic transformed image $Z$ and it's illumination and reflection component. }
 \end{figure}
 
 Since the images are discrete, the Fourier Transform the image will loop the image periodically. To avoid aliasing the source image is zero padded. Zero Padding the source image using matlabs \textit{padarray}- function. The amount of zeros padded with the image is calculated using equations \ref{eqn:Ppadded} and \ref{eqn:Qpadded} given in the coursebook\cite[p. 274]{dipBook}. Exempel of zeropadding is shown in Figure \ref{fig:zeropadded}.
@@ -93,3 +93,15 @@ The filter used to enhanced the image in this paper is a highpass guassian filte
 \end{figure}
 
 \subsection{Applying the filter and the post processing}
+
+The filter is applied by multiplication in the Frequency domain as seen in Figure \ref{fig:filteringOfImage}. 
+\begin{figure}[h!]
+  \begin{equation}
+    S(u,v) = Z(u,v)H(u,v)
+    \label{eqn:applyfilt}
+  \end{equation}
+  \caption{S: the filtered image, Z: pre-processed image from Eq \ref{eqn:logtrans}, H: highpass guassian filter described in Eq \ref{eqn:gaussian_filter} }
+  \label{fig:filteringOfImage}    
+\end{figure}
+
+Post processing consists of four steps. Shifting the filtered image to get the origo in top/left corner. Apply the inverset fourier transform. Crop the zero padding to obtain the original image dimensions. Inverse logarithm transformation by taking the exponential function of the result of croped image. The result of the post process is homomorphic filtered image.
