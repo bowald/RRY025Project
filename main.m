@@ -1,11 +1,10 @@
 %%
-
 % Constants
 close all;
-cut   = [6 6];  % Grey/tolarance. Higher, a smaler spectra of grey values.
+cut   = 6;  % Grey/tolarance. Higher, a smaler spectra of grey values.
 c     = 1;
-Yh    = [1 1]; % > 1  %Brightness higher is darker
-Yl    = [0.5 0.000025]; % < 1 %lower makes black areas more black
+Yh    = 1; % > 1  %Brightness higher is darker
+Yl    = [0.5]; % < 1 %lower makes black areas more black
 
 %forestgray = (im2double(imread('friend.tif')));
 %forestgray = im2double(imread('rice.tif'));
