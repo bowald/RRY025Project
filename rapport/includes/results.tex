@@ -22,21 +22,22 @@
 		 %Har väl inga direkta större
 		% inslag av kraftig illumination
 		
-		The filter first used in this project was (as mentioned above)
-		the variant of the gaussian high-pass filter, detailed in the course book on pp. 314; 
+%		The filter first used in this project was (as mentioned above)
+%		the variant of the gaussian high-pass filter, detailed in the course book on pp. 314; 
 		%
-		\begin{equation}
-		\label{eqn:gaussian_filter}
-			H(u,v) = \left( \gamma_H - \gamma_L \right) \left[ 1 - e^{-c \left[D^2(u,v)/D_0^2\right]}\right] + \gamma_L 
-		\end{equation}
+%		\begin{equation}
+%		\label{eqn:gaussian_filter}
+%			H(u,v) = \left( \gamma_H - \gamma_L \right) \left[ 1 - e^{-c \left[D^2(u,v)/D_0^2\right]}\right] + \gamma_L 
+%		\end{equation}
 		 %
-		This filter has the additional $\gamma$-parameters added in order to tweak
+		The filter in Eqn.~\ref{eqn:gaussian_filter} has the additional $\gamma$-parameters added in order to tweak
 		the filter in regard to illumination and reflection. The $\gamma_L$ parameter
 		will define the amount of suppression of the low frequencies (illumination); a lower $\gamma_L$
-		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}. While
-		figure~\ref{fig:low_freq_supp} may not be the most aesthetic image to look at, but it 
-		greatly enhances the information hidden in the low frequencies, especially in the darker areas.
-		Noteworthy is also that noise gets amplified as the lower frequencies gets suppressed.
+		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}.
+		Figure~\ref{fig:low_freq_supp} shows how this setting enhances the information hidden 
+		in the low frequencies, especially in the darker areas.
+		Noteworthy is also that noise gets amplified as the lower frequencies gets suppressed, as can
+		be seen in the lower part of the ridge in the center of figure~\ref{fig:low_freq_supp}.
 		\begin{figure}[h!]
 		\centering
 		\begin{subfigure}[b]{0.5\textwidth}
@@ -75,7 +76,8 @@
 		\caption{The effect of changing $\gamma_H$}				
 		\end{figure}		
 		One is able to see that the reflections gets emphasized and the overall
-		image gets darker and more polarized.
+		image gets darker and more polarized. This can be seen clearly in the contrast from the
+		tree trunk and the background, and in the white spots from the reflectant leaves.
 		\\
 		\\
 		The third and final parameter is $D_0$, which controls the steepness of the filter.
@@ -107,15 +109,17 @@
 			\label{fig:sigma}
 		\caption{The effect of changing $D_0$, with the corresponding filter below each result}				
 		\end{figure}
-		with the corresponding filters. A very high $D_0$ is moving close to edge detection,
+		with the corresponding filters. A very high $D_0$ is moving close to edge detection
+		techniques,
 		which can be very useful in areas such as computer vision, which is described in 
 		the paper~\cite{Fan20111468}.\\
-		\\
+		\subsection{Conclusion}
 		Various $\gamma_l$ and $\gamma_h$ paramaters has been tried out empirically with 
 		various results. One has to ask oneself; What information should be extracted, and what 
 		method performs best? When experimenting with emphasizing the reflections, the 
 		general results was not very good. Usually the image got very dark with a few white
-		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}.\\
+		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}, which
+		in this case provides very little to none enhancement regarding information extraction.\\
 		\\
 		When observing the original image, there seems to be some 
 		low frequency details hidden in the darker sections of the image which we were able
