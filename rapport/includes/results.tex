@@ -14,7 +14,8 @@
 		The image provided with the project depicts a forest scenery, %include picture
 		as seen in figure~\ref{fig:original}.
 		\begin{figure}[h!]
-			\includegraphics[width=\textwidth]{pics/orig_pic.png}
+			\centering
+			\includegraphics[width=0.6\linewidth]{pics/orig_pic.png}
 			\caption{The original picture, depicting a forest scenery}
 			\label{fig:original}		
 		\end{figure}		
@@ -37,14 +38,14 @@
 		figure~\ref{fig:low_freq_supp} may not be the most pleasurable image to look at, but it 
 		enhances the information hidden in the low frequencies, especially in the darker areas.
 		\begin{figure}[h!]
-		\centering
-		\begin{subfigure}[b]{0.6\textwidth}
-			\includegraphics[width=\textwidth]{pics/suppressed_low_frequences.png}
+			\centering
+			\begin{subfigure}[b]{0.5\linewidth}
+			\includegraphics[width=0.9\linewidth]{pics/suppressed_low_frequences.png}
 			\caption{$\gamma_L = 0.01,~\gamma_H = 1$}
 			\label{fig:low_freq_supp}
 			\end{subfigure}%			
-			\begin{subfigure}[b]{0.6\textwidth}
-			\includegraphics[width=\textwidth]{pics/non_suppressed_low_frequences.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+			\includegraphics[width=0.9\linewidth]{pics/non_suppressed_low_frequences.png}
 			\caption{$\gamma_L = 0.8,~\gamma_H = 1$}
 			\label{fig:low_freq_non_supp}
 			\end{subfigure}
@@ -59,13 +60,13 @@
 		examine figure~\ref{fig:gamma_diff}.
 		\begin{figure}[h!]
 			\centering
-			\begin{subfigure}[b]{0.6\textwidth}
-				\includegraphics[width=\textwidth]{pics/non_emph_high_frequnces.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/non_emph_high_frequnces.png}
 				\caption{$\gamma_L = 0.3,~\gamma_H = 1.2$}
 				\label{fig:high_freq_non_emph}
 			\end{subfigure}%	
-			\begin{subfigure}[b]{0.6\textwidth}
-				\includegraphics[width=\textwidth]{pics/emph_high_frequnces.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/emph_high_frequnces.png}
 				\caption{$\gamma_L = 0.3,~\gamma_H = 2.5$}
 				\label{fig:high_freq_emph}
 			\end{subfigure}
@@ -81,24 +82,24 @@
 		narrow spectra of gray levels. The effect of this is visible in figure~\ref{fig:sigma}
 		\begin{figure}[h!]
 			\centering
-			\begin{subfigure}[b]{0.7\textwidth}
-				\includegraphics[width=\textwidth]{pics/low_sigma.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/low_sigma.png}
 				\caption{$\gamma_L = 0,~\gamma_H = 1,~D_0 = 10$}
 				\label{fig:low_sigma}
 			\end{subfigure}%
-			\begin{subfigure}[b]{0.7\textwidth}
-				\includegraphics[width=\textwidth]{pics/high_sigma.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/high_sigma.png}
 				\caption{$\gamma_L = 0,~\gamma_H = 1,~D_0 =80$}
 				\label{fig:high_sigma}
 			\end{subfigure}
 			\label{fig:sigma}
-			\begin{subfigure}[b]{0.6\textwidth}
-				\includegraphics[width=\textwidth]{pics/low_sigma_filter.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/low_sigma_filter.png}
 				\caption{}
 				\label{fig:low_sigma_filter}
 			\end{subfigure}%
-			\begin{subfigure}[b]{0.6\textwidth}
-				\includegraphics[width=\textwidth]{pics/high_sigma_filter.png}
+			\begin{subfigure}[b]{0.5\linewidth}
+				\includegraphics[width=0.9\linewidth]{pics/high_sigma_filter.png}
 				\caption{}
 				\label{fig:high_sigma_filter}
 			\end{subfigure}
@@ -140,13 +141,13 @@
 		illumination distortion, such as figure~\ref{fig:gamma_diff} taken
 		\begin{figure}[h!]
         \centering
-		\begin{subfigure}[b]{0.6\textwidth}
-                \includegraphics[width=\textwidth]{pics/microbes_before.png}
+		\begin{subfigure}[b]{0.5\linewidth}
+                \includegraphics[width=0.9\linewidth]{pics/microbes_before.png}
                 \caption{Original image}
                 \label{fig:microbe_before}
         \end{subfigure}%
-        \begin{subfigure}[b]{0.6\textwidth}
-                \includegraphics[width=\textwidth]{pics/microbes_after.png}
+        \begin{subfigure}[b]{0.5\linewidth}
+                \includegraphics[width=0.9\linewidth]{pics/microbes_after.png}
                 \caption{Image after homomorphic filtering}
                 \label{fig:microbe_after}
         \end{subfigure}
