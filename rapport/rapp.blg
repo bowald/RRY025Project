@@ -4,7 +4,6 @@ The top-level auxiliary file: rapp.aux
 A level-1 auxiliary file: includes/intro.aux
 A level-1 auxiliary file: includes/method.aux
 A level-1 auxiliary file: includes/results.aux
-A level-1 auxiliary file: includes/discussion.aux
 A level-1 auxiliary file: includes/appendix.aux
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -20,7 +19,7 @@ Database file #1: bib.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 You've used 2 entries,
             6951 wiz_defined-function locations,
-            1290 strings with 11159 characters,
+            1289 strings with 11136 characters,
 and the built_in function-call counts, 3789 in all, are:
 = -- 477
 > -- 28

@@ -1,6 +1,6 @@
 \section{Method}
+This section will present the method of applying homomorphic filtering (HF) used in this project and an presentation of the concept of HF and the illumination-reflectance model.
 
-An image $f(u,v)$ can be represented using an illumination-reflectance model. 
 \begin{figure}[h!]
 \begin{equation}
   f(u,v) = i(u,v) r(u,v)
@@ -8,7 +8,7 @@ An image $f(u,v)$ can be represented using an illumination-reflectance model.
 \end{equation}
 \caption{Image $f$ represented with an illumination component $i$ and reflection component $r$}
 \end{figure}
-The illumination $i(u,v)$ can be characterized as slow changes in the frequency domain or as glooming light in the spatial domain. While the reflection $r(u,v)$ tends to be rapid changes in the frequency domain or as edges in the spatial domain. The homomorphic filter works in the frequency domain and aims to filter out major influences of the illumination $i(u,v)$. This results in a higher contrast and normalized brightness. \\
+The illumination $i(u,v)$ can be characterized as slow changes in the frequency domain or as glooming light in the spatial domain. While the reflection $r(u,v)$ tends to be rapid changes in the frequency domain or as edges in the spatial domain. The HF works in the frequency domain and aims to filter out major influences of the illumination $i(u,v)$. This results in a higher contrast and normalized brightness. \\
 
 \subsection{Pre-pocessing of the original image}
 To apply the filter the image $f(u,v)$ needs to be transformed into frequency domain. Since the illumination-reflectance model is multiplicative and will result in a convolution in frequency space the image will need to be pre-processed before the transformation.
@@ -40,7 +40,7 @@ Applying the logarithmic transformation on the original image results in a trans
 \caption{image $f$ represented with an illumination component $i$ and reflection component $r$, in Eq \ref{eqn:loga} multiplication becomes additive after logarithmic transform. Eq \ref{eqn:logtrans} shows the result of a fourier and logarithmic transformed image $Z$ and the corresponding illumination and reflection component.}
 \end{figure}
 
-Since the images are discrete and the Fourier Transform is applied to infinity, matlab will loop the input image periodically. To avoid aliasing and introduction of errors when applying the filter to the image, the input image is zero padded. Zero Padding the source image using matlabs \verb~padarray~ -function. The amount of zeros padded with the image is calculated using equations \ref{eqn:Ppadded} and \ref{eqn:Qpadded} given in the coursebook\cite[p. 274]{dipBook}. Exempel of zero padding is shown in Figure \ref{fig:zeropadded}.
+Since the images are discrete and the Fourier Transform is applied to infinity, matlab will loop the input image periodically. To avoid aliasing and introduction of errors when applying the filter to the image, the input image is zero padded. Zero Padding the source image using matlabs \verb~padarray~ -function. The amount of zeros padded with the image is calculated using EQ \ref{eqn:Ppadded} and EQ \ref{eqn:Qpadded} given in the coursebook\cite[p. 274]{dipBook}. Exempel of zero padding is shown in Figure \ref{fig:zeropadded}.
 \begin{figure}[h!]
 \begin{equation}
   P \geq 2M -1
@@ -65,7 +65,7 @@ Since the images are discrete and the Fourier Transform is applied to infinity, 
   \label{fig:zeropadded}    
 \end{figure}
 
-The filter used in this project is center positioned. Since matlabs \verb~fft2~ returns the transformed image with the origio in upper left corner, the result must be shifted to apply the filter correctly. Shifting the transformation is done using matlabs \verb~fftshift~
+The filter used in this project is center positioned. Since matlabs \verb~fft2~ returns the transformed image with the origio in upper left corner, the result must be shifted to apply the filter correctly. Shifting the transformation is done using matlabs \verb~fftshift~.
 
 \subsection{The construction of the homomorphic filter}
 The filter used to enhanced the image in this project is a highpass gaussian filter,Eq \ref{eqn:gaussian_filter}, with three parameters. 
@@ -78,7 +78,7 @@ The filter used to enhanced the image in this project is a highpass gaussian fil
   \item $\gamma_H$ sets the maximum enhancement of high frequencies.
   \item $\gamma_L$ sets the maximum inhibition of low frequencies.
   \item $D_0$ is the cut-of frequency, to control the steepness and width of the gaussian function.
-  \item The function $D(u,v)$ calculates the distance from the center of the filter to each element ,$u,v$, in the filter.  
+  \item The function $D(u,v)$ calculates the distance from the center of the filter to each element ,$u,v$, in the filter. Matlab code for the function used in this project is shown in Figure \ref{code:raduv}.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -88,8 +88,8 @@ The filter used to enhanced the image in this project is a highpass gaussian fil
     centerV = ceil(p/2);
     gaussianNumerator = ((u - centerU).^2 + (v - centerV).^2);
   \end{lstlisting}
-  \label{code:raduv}
   \caption{Matlab code of the distance function $D(u,v)$ used in the filter. p and q is the size of the image after zero padding.}
+  \label{code:raduv}
 \end{figure}
 
 \subsection{Applying the filter and the post-processing}
