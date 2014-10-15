@@ -1,11 +1,4 @@
-% \documentclass[a4paper]{article}
-% \usepackage{graphicx}
-% \usepackage{caption}
-% \usepackage{subcaption}
-% \begin{document}
-
-
-\section{Results}
+\section{Results from applying homomorphic filtering}
 	This section will present the results of applying homomorphic filtering (HF)
 	on an image. Also provided is some experiments with different images
 	and filters not used in the book, as to test if this method could yield
@@ -20,35 +13,26 @@
 			\label{fig:original}		
 		\end{figure}		
 		
-		 %Har väl inga direkta större
-		% inslag av kraftig illumination
-		
-		The filter first used in this project was
-		the variant of the gaussian high-pass filter, detailed in the course book on pp. 314; 
-		%
-		\begin{equation}
-		\label{eqn:gaussian_filter}
-			H(u,v) = \left( \gamma_H - \gamma_L \right) \left[ 1 - e^{-c \left[D^2(u,v)/D_0^2\right]}\right] + \gamma_L 
-		\end{equation}
-		 %
-		This filter has the additional $\gamma$-parameters added in order to tweak
+		The filter in Eqn.~\ref{eqn:gaussian_filter} has the additional $\gamma$-parameters added in order to tweak
 		the filter in regard to illumination and reflection. The $\gamma_L$ parameter
 		will define the amount of suppression of the low frequencies (illumination); a lower $\gamma_L$
-		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}. While
-		figure~\ref{fig:low_freq_supp} may not be the most pleasurable image to look at, but it 
-		enhances the information hidden in the low frequencies, especially in the darker areas.
+		will suppress low frequencies, which can be seen in figure~\ref{fig:low_freq_supp}.
+		Figure~\ref{fig:low_freq_supp} shows how this setting enhances the information hidden 
+		in the low frequencies, especially in the darker areas.
+		Noteworthy is also that noise gets amplified as the lower frequencies gets suppressed, as can
+		be seen in the lower part of the ridge in the center of figure~\ref{fig:low_freq_supp}.
 		\begin{figure}[h!]
 			\centering
-			\begin{subfigure}[b]{0.5\linewidth}
-			\includegraphics[width=0.9\linewidth]{pics/suppressed_low_frequences.png}
-			\caption{$\gamma_L = 0.01,~\gamma_H = 1$}
-			\label{fig:low_freq_supp}
-			\end{subfigure}%			
-			\begin{subfigure}[b]{0.5\linewidth}
-			\includegraphics[width=0.9\linewidth]{pics/non_suppressed_low_frequences.png}
-			\caption{$\gamma_L = 0.8,~\gamma_H = 1$}
-			\label{fig:low_freq_non_supp}
-			\end{subfigure}
+				\begin{subfigure}[b]{0.5\linewidth}
+					\includegraphics[width=0.9\linewidth]{pics/suppressed_low_frequences.png}
+					\caption{$\gamma_L = 0.01,~\gamma_H = 1$}
+					\label{fig:low_freq_supp}
+				\end{subfigure}%			
+				\begin{subfigure}[b]{0.5\linewidth}
+					\includegraphics[width=0.9\linewidth]{pics/non_suppressed_low_frequences.png}
+					\caption{$\gamma_L = 0.8,~\gamma_H = 1$}
+					\label{fig:low_freq_non_supp}
+				\end{subfigure}
 			\label{fig:various_low_gamma}
 			\caption{The effect of changing $\gamma_L$}				
 		\end{figure}		
@@ -74,7 +58,8 @@
 		\caption{The effect of changing $\gamma_H$}				
 		\end{figure}		
 		One is able to see that the reflections gets emphasized and the overall
-		image gets darker and more polarized.
+		image gets darker and more polarized. This can be seen clearly in the contrast from the
+		tree trunk and the background, and in the white spots from the reflectant leaves.
 		\\
 		\\
 		The third and final parameter is $D_0$, which controls the steepness of the filter.
@@ -106,20 +91,22 @@
 			\label{fig:sigma}
 		\caption{The effect of changing $D_0$, with the corresponding filter below each result}				
 		\end{figure}
-		with the corresponding filters. A very high $D_0$ is moving close to edge detection,
+		with the corresponding filters. A very high $D_0$ is moving close to edge detection
+		techniques,
 		which can be very useful in areas such as computer vision, which is described in 
-		the paper \cite{Fan20111468}.\\
-		\\
+		the paper~\cite{Fan20111468}.\\
+		\subsection{Conclusion}
 		Various $\gamma_l$ and $\gamma_h$ paramaters has been tried out empirically with 
 		various results. One has to ask oneself; What information should be extracted, and what 
 		method performs best? When experimenting with emphasizing the reflections, the 
 		general results was not very good. Usually the image got very dark with a few white
-		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}.\\
+		spots from the highest frequencies, like in figure~\ref{fig:high_freq_emph}, which
+		in this case provides very little to none enhancement regarding information extraction.\\
 		\\
 		When observing the original image, there seems to be some 
 		low frequency details hidden in the darker sections of the image which we were able
-		to enhance. When the paramaters was $\gamma_L = 0,~\gamma_H = 1$,
-		essentially elimiting the use of the parameters, a (in our opinion) good result was 
+		to enhance. When the paramaters was $\gamma_L = 0.5,~\gamma_H = 1$, a (in our opinion)
+		good result was 
 		found in figure~\ref{fig:result}. The details in the darker sections gets enhanced, 
 		and the overall brightness
 		of the image gets equalized. One drawback is that the bushes, which details 
@@ -131,7 +118,7 @@
 		Our final conclusion when working on this image is that homomorphic filtering
 		is probably not the best method to use in order to enhance it.
 		\begin{figure}[h!]
-			\includegraphics{pics/resulting_image.png}
+			\includegraphics[width=\textwidth]{pics/resulting_image.png}
 			\caption{The result}
 			\label{fig:result}		
 		\end{figure}
@@ -140,16 +127,16 @@
 		If homomorphic filtering is applied on images with a more appearent
 		illumination distortion, such as figure~\ref{fig:gamma_diff} taken
 		\begin{figure}[h!]
-        \centering
-		\begin{subfigure}[b]{0.5\linewidth}
-                \includegraphics[width=0.9\linewidth]{pics/microbes_before.png}
-                \caption{Original image}
-                \label{fig:microbe_before}
+      \centering
+				\begin{subfigure}[b]{0.5\linewidth}
+          \includegraphics[width=0.9\linewidth]{pics/microbes_before.png}
+          \caption{Original image}
+          \label{fig:microbe_before}
         \end{subfigure}%
         \begin{subfigure}[b]{0.5\linewidth}
-                \includegraphics[width=0.9\linewidth]{pics/microbes_after.png}
-                \caption{Image after homomorphic filtering}
-                \label{fig:microbe_after}
+          \includegraphics[width=0.9\linewidth]{pics/microbes_after.png}
+          \caption{Image after homomorphic filtering}
+          \label{fig:microbe_after}
         \end{subfigure}
         \caption{An image with a appearent illumination distortion in the background}	
         \label{fig:gamma_diff}
@@ -157,13 +144,12 @@
 		from the matlab image processing toolbox, the effects are much more obvious. 
 		In this image there is a large illumination
 		distortion in the background (the black gradient), which here is efficiently 
-		removed by the homomorphic filtering process. \\
+		removed by the homomorphic filtering process (the black, uniform gradient border
+		comes from the zero padding). \\
 		\\
 		When reading various papers on the
 		subject we found several other areas where homomorphic filtering is very effective,
 		such as a preprocessing step for facial recognition. The human face has many convex
-		portions, which contributes to illumination. In the paper mentioned earlier, HF
+		portions, which contributes to illumination. In the paper~\cite{Fan20111468}, HF
 		is used to remove this illumination and bring forth the edges in the face, making
 		the facial recognition algorithms perform better under varying lightning conditions.
-		%Elaborate perhaps?
-% \end{document} 

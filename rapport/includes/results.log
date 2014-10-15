@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  14 OCT 2014 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  14 OCT 2014 15:01
 entering extended mode
 **results.tex
 (C:\git\RRY025Project\rapport\includes\results.tex
@@ -1576,7 +1576,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.62 			\begin{subfigure}
-                         [b]{0.6\textwidth}
+                         [b]{0.5\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1586,11 +1586,11 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.62 			\begin{subfigure}[b]{0.6\textwidth}
+l.62 			\begin{subfigure}[b]{0.5\textwidth}
                                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1599,7 +1599,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.62 			\begin{subfigure}[b]{0.6\textwidth}
+l.62 			\begin{subfigure}[b]{0.5\textwidth}
                                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1722,8 +1722,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 			\begin{subfigure}
-                         [b]{0.6\textwidth}
+l.68 			\begin{subfigure}
+                         [b]{0.5\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1733,11 +1733,11 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.67 			\begin{subfigure}[b]{0.6\textwidth}
+l.68 			\begin{subfigure}[b]{0.5\textwidth}
                                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1746,7 +1746,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.67 			\begin{subfigure}[b]{0.6\textwidth}
+l.68 			\begin{subfigure}[b]{0.5\textwidth}
                                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1756,7 +1756,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.68 				\includegraphics
+l.69 				\includegraphics
                          [width=\textwidth]{pics/emph_high_frequnces.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1774,7 +1774,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.68 				\includegraphics[width=\textwidth]
+l.69 				\includegraphics[width=\textwidth]
                                            {pics/emph_high_frequnces.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1783,7 +1783,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.68 				\includegraphics[width=\textwidth]
+l.69 				\includegraphics[width=\textwidth]
                                            {pics/emph_high_frequnces.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1805,13 +1805,13 @@ Missing character: There is no h in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.68 ...cludegraphics[width=\textwidth]{pics/emph_
+l.69 ...cludegraphics[width=\textwidth]{pics/emph_
                                                   high_frequnces.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.68 ...=\textwidth]{pics/emph_high_frequnces.png}
+l.69 ...=\textwidth]{pics/emph_high_frequnces.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1826,7 +1826,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 				\caption
+l.70 				\caption
                  {$\gamma_L = 0.3,~\gamma_H = 2.5$}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1834,7 +1834,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.69 				\caption{$
+l.70 				\caption{$
                    \gamma_L = 0.3,~\gamma_H = 2.5$}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1845,7 +1845,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.69 				\caption{$\gamma
+l.70 				\caption{$\gamma
                          _L = 0.3,~\gamma_H = 2.5$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1857,7 +1857,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 			\end{subfigure}
+l.72 			\end{subfigure}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1870,7 +1870,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 		\caption
+l.74 		\caption
                {The effect of changing $\gamma_H$}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1901,7 +1901,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 		\end{figure}
+l.75 		\end{figure}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2182,7 +2182,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...Reference `fig:sigma' on page \thepage 
                                                   \space undefined\on@line .
-l.81 ... this is visible in figure~\ref{fig:sigma}
+l.82 ... this is visible in figure~\ref{fig:sigma}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2191,7 +2191,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `fig:sigma' on page  undefined on input line 81.
+LaTeX Warning: Reference `fig:sigma' on page  undefined on input line 82.
 
 
 ! LaTeX Error: Environment figure undefined.
@@ -2200,7 +2200,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82 		\begin{figure}
+l.83 		\begin{figure}
                      [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2217,7 +2217,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 			\begin{subfigure}
+l.85 			\begin{subfigure}
                          [b]{0.7\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2232,7 +2232,7 @@ Missing character: There is no 7 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.84 			\begin{subfigure}[b]{0.7\textwidth}
+l.85 			\begin{subfigure}[b]{0.7\textwidth}
                                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2241,7 +2241,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.84 			\begin{subfigure}[b]{0.7\textwidth}
+l.85 			\begin{subfigure}[b]{0.7\textwidth}
                                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2251,7 +2251,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.85 				\includegraphics
+l.86 				\includegraphics
                          [width=\textwidth]{pics/low_sigma.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2269,7 +2269,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.85 				\includegraphics[width=\textwidth]
+l.86 				\includegraphics[width=\textwidth]
                                            {pics/low_sigma.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2278,7 +2278,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.85 				\includegraphics[width=\textwidth]
+l.86 				\includegraphics[width=\textwidth]
                                            {pics/low_sigma.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2299,13 +2299,13 @@ Missing character: There is no w in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.85 ...ncludegraphics[width=\textwidth]{pics/low_
+l.86 ...ncludegraphics[width=\textwidth]{pics/low_
                                                   sigma.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.85 ...hics[width=\textwidth]{pics/low_sigma.png}
+l.86 ...hics[width=\textwidth]{pics/low_sigma.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2320,7 +2320,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 				\caption
+l.87 				\caption
                  {$\gamma_L = 0,~\gamma_H = 1,~D_0 = 10$}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2328,7 +2328,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.86 				\caption{$
+l.87 				\caption{$
                    \gamma_L = 0,~\gamma_H = 1,~D_0 = 10$}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2339,7 +2339,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.86 				\caption{$\gamma
+l.87 				\caption{$\gamma
                          _L = 0,~\gamma_H = 1,~D_0 = 10$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2351,7 +2351,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88 			\end{subfigure}
+l.89 			\end{subfigure}
                        %
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2364,7 +2364,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 			\begin{subfigure}
+l.90 			\begin{subfigure}
                          [b]{0.7\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2379,7 +2379,7 @@ Missing character: There is no 7 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.89 			\begin{subfigure}[b]{0.7\textwidth}
+l.90 			\begin{subfigure}[b]{0.7\textwidth}
                                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2388,7 +2388,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.89 			\begin{subfigure}[b]{0.7\textwidth}
+l.90 			\begin{subfigure}[b]{0.7\textwidth}
                                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2398,7 +2398,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.90 				\includegraphics
+l.91 				\includegraphics
                          [width=\textwidth]{pics/high_sigma.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2416,7 +2416,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.90 				\includegraphics[width=\textwidth]
+l.91 				\includegraphics[width=\textwidth]
                                            {pics/high_sigma.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2425,7 +2425,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.90 				\includegraphics[width=\textwidth]
+l.91 				\includegraphics[width=\textwidth]
                                            {pics/high_sigma.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2447,13 +2447,13 @@ Missing character: There is no h in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.90 ...cludegraphics[width=\textwidth]{pics/high_
+l.91 ...cludegraphics[width=\textwidth]{pics/high_
                                                   sigma.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.90 ...ics[width=\textwidth]{pics/high_sigma.png}
+l.91 ...ics[width=\textwidth]{pics/high_sigma.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2468,7 +2468,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 				\caption
+l.92 				\caption
                  {$\gamma_L = 0,~\gamma_H = 1,~D_0 =80$}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2476,7 +2476,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.91 				\caption{$
+l.92 				\caption{$
                    \gamma_L = 0,~\gamma_H = 1,~D_0 =80$}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2487,7 +2487,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.91 				\caption{$\gamma
+l.92 				\caption{$\gamma
                          _L = 0,~\gamma_H = 1,~D_0 =80$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2499,7 +2499,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 			\end{subfigure}
+l.94 			\end{subfigure}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2512,7 +2512,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 			\begin{subfigure}
+l.96 			\begin{subfigure}
                          [b]{0.6\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2527,7 +2527,7 @@ Missing character: There is no 6 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.95 			\begin{subfigure}[b]{0.6\textwidth}
+l.96 			\begin{subfigure}[b]{0.6\textwidth}
                                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2536,7 +2536,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.95 			\begin{subfigure}[b]{0.6\textwidth}
+l.96 			\begin{subfigure}[b]{0.6\textwidth}
                                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2546,7 +2546,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.96 				\includegraphics
+l.97 				\includegraphics
                          [width=\textwidth]{pics/low_sigma_filter.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2564,7 +2564,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.96 				\includegraphics[width=\textwidth]
+l.97 				\includegraphics[width=\textwidth]
                                            {pics/low_sigma_filter.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2573,7 +2573,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.96 				\includegraphics[width=\textwidth]
+l.97 				\includegraphics[width=\textwidth]
                                            {pics/low_sigma_filter.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2594,13 +2594,13 @@ Missing character: There is no w in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.96 ...ncludegraphics[width=\textwidth]{pics/low_
+l.97 ...ncludegraphics[width=\textwidth]{pics/low_
                                                   sigma_filter.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.96 ...dth=\textwidth]{pics/low_sigma_filter.png}
+l.97 ...dth=\textwidth]{pics/low_sigma_filter.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2615,7 +2615,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.97 				\caption
+l.98 				\caption
                  {}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2627,8 +2627,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.99 			\end{subfigure}
-                       %
+l.100 			\end{subfigure}
+                        %
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2636,8 +2636,8 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.99 			\end{subfigure}
-                       %
+l.100 			\end{subfigure}
+                        %
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2647,8 +2647,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.99 			\end{subfigure}
-                       %
+l.100 			\end{subfigure}
+                        %
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2662,7 +2662,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.100 			\begin{subfigure}
+l.101 			\begin{subfigure}
                           [b]{0.6\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2677,7 +2677,7 @@ Missing character: There is no 6 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    }
-l.100 			\begin{subfigure}[b]{0.6\textwidth}
+l.101 			\begin{subfigure}[b]{0.6\textwidth}
                                             
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2686,7 +2686,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.100 			\begin{subfigure}[b]{0.6\textwidth}
+l.101 			\begin{subfigure}[b]{0.6\textwidth}
                                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2696,7 +2696,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.101 				\includegraphics
+l.102 				\includegraphics
                           [width=\textwidth]{pics/high_sigma_filter.png}
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
