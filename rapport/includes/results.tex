@@ -1,5 +1,5 @@
 \section{Results from applying homomorphic filtering}
-	This section will present the results of applying homomorphic filtering (HF)
+	This section will present the results of applying HF
 	on an image. Also provided is some experiments with different images
 	and filters not used in the book, as to test if this method could yield
 	better or worse results in different types of information depicted.
@@ -88,8 +88,8 @@
 				\caption{}
 				\label{fig:high_sigma_filter}
 			\end{subfigure}
-			\label{fig:sigma}
 		\caption{The effect of changing $D_0$, with the corresponding filter below each result}				
+		\label{fig:sigma}
 		\end{figure}
 		with the corresponding filters. A very high $D_0$ is moving close to edge detection
 		techniques,
@@ -115,7 +115,7 @@
 		\\
 		Further the other parameters was set to $D_0 = 6$. Of course,
 		the paramaters should be changed depending on what information should be extracted.
-		Our final conclusion when working on this image is that homomorphic filtering
+		Our final conclusion when working on this image is that HF
 		is able to emphasize some details in the ridge and trunks on the cost of some soft edges of tree trunks found in the part of the image affected by sunlight. Though this technique offers some improvement of this image, a better application of this technique is images with a more apparent illumination distortion. More on this in section \ref{chap:experiments}
 		\begin{figure}[h!]
 			\centering
@@ -130,12 +130,12 @@
 				\label{fig:orig2}
 			\end{subfigure}
 			\label{fig:resComp}
-		\caption{(a) Most visually pleasing enhanced image using Homomorphic filtering according to the group. The details in the ridge and tree trunks are emphasized while still preserving the soft edges of the trees in the light(Most visible on the left to the big centered tree trunk in top of the image). (b) original image for reference}				
+		\caption{(a) Most visually pleasing enhanced image using HF according to the group. The details in the ridge and tree trunks are emphasized while still preserving the soft edges of the trees in the light(Most visible on the left to the big centered tree trunk in top of the image). (b) original image for reference}				
 		\end{figure}		
 
 		\subsection{Experiments with different images}
 		\label{chap:experiments}
-		If homomorphic filtering is applied on images with a more appearent
+		If HF is applied on images with a more appearent
 		illumination distortion, such as figure~\ref{fig:gamma_diff} taken
 		\begin{figure}[h!]
       \centering
@@ -159,7 +159,7 @@
 		comes from the zero padding). \\
 		\\
 		When reading various papers on the
-		subject we found several other areas where homomorphic filtering is very effective,
+		subject we found several other areas where HF is very effective,
 		such as a preprocessing step for facial recognition. The human face has many convex
 		portions, which contributes to illumination. In the paper~\cite{Fan20111468}, HF
 		is used to remove this illumination and bring forth the edges in the face, making
