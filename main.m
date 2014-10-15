@@ -2,19 +2,18 @@
 
 % Constants
 close all;
-cut   = [10 10];  % Grey/tolarance. Higher, a smaler spectra of grey values.
+cut   = [6 6];  % Grey/tolarance. Higher, a smaler spectra of grey values.
 c     = 1;
 Yh    = [1 1]; % > 1  %Brightness higher is darker
-Yl    = [0.01 0.8]; % < 1 %lower makes black areas more black
+Yl    = [0.5 0.000025]; % < 1 %lower makes black areas more black
 
-%forestgray = im2double(imread('AT3_1m4_01.tif'));
+%forestgray = (im2double(imread('friend.tif')));
 %forestgray = im2double(imread('rice.tif'));
-
 load('forest.mat');
-
+forestgray = forestgray + 0.00001;
 figure
   imshow(forestgray, []) % Original image
-histi = histeq(forestgray);
+%histi = histeq(forestgray);
 %figure
 n = size(forestgray,1);
 m = size(forestgray,2);
