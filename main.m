@@ -13,17 +13,13 @@ m = size(forestgray,2);
 q = 2*m - 1;
 p = 2*n - 1; 
 
-% log
-forest = log(forestgray);
+forest = log(forestgray);                           % log
 
-% Zero padding
-forest = padarray( forest , [p-n q-m],  0, 'post');   
+forest = padarray( forest , [p-n q-m],  0, 'post'); % Zero padding
 
-% Transform
-forest = fft2(forest);                                
+forest = fft2(forest);                              % Transform
 
-% Shift
-forest = fftshift(forest);                            
+forest = fftshift(forest);                          % Shift
   
   % Setup D(x,y), the distance function
   [u, v] = meshgrid(1:q,1:p);
@@ -38,20 +34,15 @@ for i = 1:length(Yl) %cut, yl and yh can be entered as vectors for parameter stu
     %Filtering the image
     procForest = H.*forest;
 
-    % Shift
-    procForest = ifftshift(procForest);
+    procForest = ifftshift(procForest);           % Shift
+    
+    procForest = ifft2(procForest);               % I-Transform
+    
+    procForest = procForest(1:n, 1:m);            % Crop
+    
+    procForest = exp(procForest); %inverse log(x) % Inverse log
 
-    % I-Transform
-    procForest = ifft2(procForest);
-
-    % Crop
-    procForest = procForest(1:n, 1:m);
-
-    % Inverse log
-    procForest = exp(procForest); %inverse log(x)
-
-    % Result only in real values
-    result = real(procForest);
+    result = real(procForest);                    % Result only in real values
 
     figure
     imshow(result,[])
